@@ -39,11 +39,15 @@ export default function NavBar() {
                                     </Button>
                                 </DropdownMenuTrigger>
 
-                                <DropdownMenuContent>
-                                    <DropdownMenuLabel>
-                                        <div>
-                                            <p>{ data.user.name }</p>
-                                            <p>{ data.user.email }</p>
+                                <DropdownMenuContent className="w-56" align={'end'}>
+                                    <DropdownMenuLabel className="font-normal">
+                                        <div className="flex flex-col space-y-1">
+                                            <p className="text-sm font-medium leading-none">
+                                                { data.user.name }
+                                            </p>
+                                            <p className="text-xs leading-none text-muted-foreground">
+                                                { data.user.email }
+                                            </p>
                                         </div>
                                     </DropdownMenuLabel>
                                     <SignOutButton />
